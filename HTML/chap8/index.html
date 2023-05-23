@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>*Ces zones sont obligatoires</p>
+        <form action="destination.php" method="post">
+            <p>Vos coordonnées</p>
+            <div>
+                <p>nom*</p><input type="text" name="nom" required>
+            </div>
+            <div>
+                <p>prénom*</p><input type="text" name="prenom"required>
+            </div>
+            <div>
+                <label for="sexe"required>:</label>
+                <input type="radio" name="sexe" value="homme"> homme
+                <input type="radio" name="sexe" value="femme"> femme
+                <input type="radio" name="sexe" value="autres"> autres
+           
+                </select>
+            </div>
+            <div>
+                <label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date" required><br>
+                <label for="town">code postale:</label><input type="town" name="code postale"><br>
+                <label for="town">adresse:</label><input type="town" name="adresse"><br>
+                <label for="town">ville:</label><input type="town" name="ville"><br>
+                <label for="?">Email:</label><input type="email" name="email" required><br>
+            </div>
+            <p>Votre demande</p>
+            <div>
+                <p>Sujet*</p><label for="couleur">veuillez selectionner un sujet</label>
+                <select id="couleur">
+                    <option value="veuillez selectionner un sujet" selected>-</option>
+                    <option value="mes commandes">mes commandes</option>
+                    <option value="question sur un produit">question sur un produit</option>
+                    <option value="réclamation">réclamation</option>
+                    <option value="autres">autres</option>
+            </div>
+            </select>
+            <div>
+                <P>Votre question*:</question><textarea name="commentaire" rows="5" cols="25"></textarea></P>
+                <input type="checkbox" name="couleur1" value="*J'accepte le traitement informatique de ce formulaire"
+                    checked>
+                *J'accepte le traitement informatique de ce formulaire
+            </div>
+
+            <input type="submit" value="envoyer">
+            <input type="submit" value="annuler">
+        </form>
+</body>
+</html>
