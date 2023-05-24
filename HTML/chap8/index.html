@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <form>
-        <p>*Ces zones sont obligatoires</p>
-        <form action="destination.php" method="post">
-            <p>Vos coordonnées</p>
+    <h2>formulaire</h2>
+         <p>Vos coordonnées</p>
+         <form method="POST" action="http://bienvu.net/script.php"></form>
             <div>
-                <p>nom*</p><input type="text" name="nom" required>
+               <label for="nom">Votre nom* :</label>
+               <input type="text" id="nom" name="nom" required>
             </div>
             <div>
-                <p>prénom*</p><input type="text" name="prenom"required>
+                <label for="prenom">Votre prenom* :</label>
+                <input type="text" id="prenom" name="prenom" required>
             </div>
             <div>
-                <label for="sexe"required>:</label>
-                <input type="radio" name="sexe" value="homme"> homme
-                <input type="radio" name="sexe" value="femme"> femme
-                <input type="radio" name="sexe" value="autres"> autres
-           
+                <label for="sexe">Sexe* :</label>
+                <inpute type="radio"></option>
+                <input type="radio">Homme</option>
+                <input type="radio">Femme</option>
+                <input type="radio">Autre</option>
                 </select>
             </div>
             <div>
-                <label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date" required><br>
-                <label for="town">code postale:</label><input type="town" name="code postale"><br>
-                <label for="town">adresse:</label><input type="town" name="adresse"><br>
-                <label for="town">ville:</label><input type="town" name="ville"><br>
-                <label for="?">Email:</label><input type="email" name="email" required><br>
+                <label for="date_naissance">Date de naissance*:</label>
+                <input type="date" id="date_naissance" name="date_naissance" required>
+            </div>
+            <div>
+                <label for="code_postale">Code postale* :</label>
+                <input type="text" id="code_postale" name="code_postale"required>
+            </div>
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse">
+            </div>
+            <div>
+                <label for="ville">Ville :</label>
+                <input type="text" id="ville" name="ville">
+            </div>
+            <div>
+                <label for="email">Email* :</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <p>Votre demande</p>
             <div>
-                <p>Sujet*</p><label for="couleur">veuillez selectionner un sujet</label>
+                <div>
+                    <!-- La différence entre GET et POST est que l'URL change pour GET il prend les données que nous inscrivons dans le formulaire
+                   et pour POST il ne prend en compte que le site où l'on va. -->
+                     <form method="POST" action="http://bienvu.net/script.php"></form>
+                       <div>
+                <p>Sujet*</p>
+                <label for="couleur">veuillez selectionner un sujet</label>
                 <select id="couleur">
                     <option value="veuillez selectionner un sujet" selected>-</option>
                     <option value="mes commandes">mes commandes</option>
@@ -49,9 +67,8 @@
                 <P>Votre question*:</question><textarea name="commentaire" rows="5" cols="25"></textarea></P>
                 <input type="checkbox" name="couleur1" value="*J'accepte le traitement informatique de ce formulaire"
                     checked>
-                *J'accepte le traitement informatique de ce formulaire
+               <form action="http://bienvu.net/script.php" method="post"></form> *J'accepte le traitement informatique de ce formulaire
             </div>
-
             <input type="submit" value="envoyer">
             <input type="submit" value="annuler">
         </form>
